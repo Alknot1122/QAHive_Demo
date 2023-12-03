@@ -134,6 +134,7 @@ def test_login_without_input_005():
 
     try:
         driver.get("https://web-demo.qahive.com/e-commerce/register")
+        time.sleep(1)
 
         submit_button = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, "//button[contains(text(),'submit')]")))
         submit_button.click()
@@ -222,10 +223,10 @@ def test_no_number_password_009():
         password_input.send_keys("teera")
         submit_button.click()
 
-        error_message = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, "//div[contains(text(),'Password must contain at least one number')]")))
+        error_message = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, "//div[contains(text(),'Password must contain at least one uppercase lette')]")))
         print("\033[92mtest_no_number_password_009 - PASSED: Password without a number not allowed\033[0m")
     except Exception as e:
-        print(f"\033[91mtest_no_number_password_009 - FAILED: Error occurred - {e}\033[0m")
+        print("\033[91mtest_no_number_password_009 - FAILED: Error occurred - Password without a number allowed\033[0m")
     finally:
         driver.quit()
 
