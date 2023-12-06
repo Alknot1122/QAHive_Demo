@@ -5,7 +5,7 @@ This repository is my personal training ground for both manual and automated tes
 ## Contents
 
 1. [**Testcases.xlsx**](/Testcases.xlsx): Includes a list of test cases for manual testing.
-2. [**Test_Selenium.py**](/Test_Selenium.py): Python script for automated testing with Selenium.
+2. [**Test_Login_Selenium.py**](/Test_Login_Selenium.py): Python script for automated testing with Selenium.
 3. [**README.md**](/README.md): This file, documenting the training journey.
 
 ## Training Progress
